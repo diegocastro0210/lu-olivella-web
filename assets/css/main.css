@@ -112,6 +112,9 @@ section {
 body {
   line-height: 1;
   font-family: "Montserrat", sans-serif;
+  -webkit-text-size-adjust: none;
+  -ms-overflow-style: scrollbar;
+  background: #312450;
 }
 
 ol,
@@ -137,9 +140,9 @@ table {
   border-spacing: 0;
 }
 
-body {
+/* body {
   -webkit-text-size-adjust: none;
-}
+} */
 
 mark {
   background-color: transparent;
@@ -166,9 +169,9 @@ textarea {
   width: device-width;
 }
 
-body {
+/* body {
   -ms-overflow-style: scrollbar;
-}
+} */
 
 @media screen and (max-width: 480px) {
   html,
@@ -187,9 +190,9 @@ html {
   box-sizing: inherit;
 }
 
-body {
+/* body {
   background: #312450;
-}
+} */
 
 body.is-preload *,
 body.is-preload *:before,
@@ -3538,6 +3541,103 @@ body.is-preload .wrapper.fade > .inner {
 
 #sidebar + #wrapper {
   margin-left: 18em;
+}
+
+/* Header adjustments for the logo and menu */
+#header {
+  align-items: center;
+  display: flex; /* Makes #header a flex container */
+  justify-content: space-between; /* Spreads out the logo and nav to each end */
+  padding: 1em; /* Adjust this value to control the space at the top inside the header */
+}
+
+#header .logo {
+  display: block; /* or inline-block depending on your design */
+  margin-right: auto; /* adjust as needed for spacing */
+}
+
+#header .logo img {
+  height: auto; /* maintain aspect ratio */
+  width: 8em; /* adjust as needed for your logo size */
+}
+
+#header #nav {
+  display: flex;
+  align-items: center; /* Aligns the navigation items in the middle vertically */
+  margin-left: auto; /* Pushes navigation to the right */
+}
+
+#header #nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex; /* Align menu items horizontally */
+}
+
+#header #nav ul li {
+  padding: 0 1em; /* Gives some space between each nav item */
+  display: inline-block;
+}
+
+#header #nav ul li a {
+  text-decoration: none;
+  color: white; /* or any color you prefer */
+  font-weight: bold;
+  font-family: inherit;
+}
+
+#nav {
+  justify-content: flex-end;
+}
+
+.menuToggle {
+  display: none;
+}
+
+/* Responsive adjustments for the navigation menu */
+@media screen and (max-width: 736px) {
+  #header {
+    flex-direction: column; /* Stacks logo and nav vertically on smaller screens */
+  }
+
+  #header .logo,
+  #header #nav {
+    margin-left: 0; /* Removes the margin on mobile to align with the x-axis start */
+    margin-right: 0; /* Removes the margin on mobile to align with the x-axis start */
+  }
+
+  #header #nav ul {
+    flex-direction: column; /* Stacks nav items vertically */
+    display: none;
+  }
+
+  #header #nav ul li {
+    padding: 0.5em 0; /* Adjusts the spacing for a vertical layout */
+  }
+
+  #header #nav .icon {
+    display: inline-block; /* Show hamburger icon */
+  }
+}
+#nav.active ul {
+  display: block;
+}
+
+/* Hamburger icon on mobile */
+#nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 736px) {
+  #nav ul {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+  #nav .icon {
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 1280px) {

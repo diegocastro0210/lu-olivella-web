@@ -19,20 +19,90 @@
     /></noscript>
   </head>
   <body class="is-preload">
-    <!-- Header -->
     <header id="header">
-      <a href="index.html" class="title"
-        >Lucía Olivella, Mindful Wellness Coaching</a
-      >
-      <nav>
+      <span class="logo"><img src="images/logolublanco.png" alt="" /></span>
+      <nav id="nav">
+        <!-- Hamburger Icon -->
+        <a href="#menu" class="menuToggle"><span class="fa fa-bars"></span></a>
+        <!-- Navigation -->
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="quien-soy.html" class="active">Quién soy</a></li>
           <li><a href="que-hago.html">Qué hago</a></li>
           <li><a href="de-que-forma.html">De qué forma</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- <header id="header">
+      <span class="logo"><img src="images/logolublanco.png" alt="" /></span>
+      <nav id="nav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+          <li><a href="quien-soy.html" class="active">Quién soy</a></li>
+          <li><a href="que-hago.html">Qué hago</a></li>
+          <li><a href="de-que-forma.html">De qué forma</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <!-- Header -->
+    <!-- <header id="header">
+      <span class="logo"><img src="images/logolublanco.png" alt="" /></span>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li> -->
+    <!-- <li><a href="quien-soy.html">Quién soy</a></li>
+          <li><a href="que-hago.html" class="active">Qué hago</a></li>
+          <li><a href="de-que-forma.html">De qué forma</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </ul>
+      </nav>
+    </header>  -->
+
+    <!-- <div id="main-menu">
+        <ul class="topnav" id="myTopnav">
+          <li class="mobile-only">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li><a href="quien-soy.html" class="active">Quién soy</a></li>
+          <li><a href="que-hago.html">Qué hago</a></li>
+          <li><a href="de-que-forma.html">De qué forma</a></li>
+        </ul>
+      </div> -->
+
+    <!-- <nav id="main-menu">
+        <ul class="topnav" id="myTopnav">
+          
+          <li><a href="quien-soy.html" class="active">Quién soy</a></li>
+          <li><a href="que-hago.html">Qué hago</a></li>
+          <li><a href="de-que-forma.html">De qué forma</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </ul>
+      </nav> -->
+
+    <!-- <button id="menu-toggle">Menu</button> -->
+
+    <!-- <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li> -->
+    <!-- <li><a href="quien-soy.html" class="active">Quién soy</a></li>
+          <li><a href="que-hago.html">Qué hago</a></li>
+          <li><a href="de-que-forma.html">De qué forma</a></li>
+        </ul>
+      </nav> -->
+    <!-- </header> -->
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -91,5 +161,16 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var menuToggle = document.querySelector(".menuToggle"); // This targets the anchor tag with class "menuToggle"
+        var nav = document.getElementById("nav");
+
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+          nav.classList.toggle("active"); // This toggles the "active" class on the nav element
+        });
+      });
+    </script>
   </body>
 </html>
