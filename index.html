@@ -177,31 +177,34 @@
           <h2>Conectate conmigo</h2>
           <div class="split style2">
             <section>
-              <form method="post" action="#">
+              <form method="POST" action="https://formspree.io/f/meqynjnp">
                 <div class="fields">
                   <div class="field half">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" />
+                    <input type="text" name="Nombre" id="name" required />
                   </div>
                   <div class="field half">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" />
+                    <input type="email" name="Email" id="email" required />
                   </div>
                   <div class="field">
                     <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" rows="5"></textarea>
+                    <textarea name="message" id="Mensaje" rows="5" required></textarea>
                   </div>
                 </div>
                 <ul class="actions">
-                  <li><a href="" class="button submit">Enviar</a></li>
+                  <li><button type="submit" class="button submit">Enviar</button></li>
                 </ul>
+                <input type="hidden" name="_subject" value="New submission!" />
+                <input type="text" name="_gotcha" style="display:none" />
               </form>
             </section>
+            
             <section>
               <ul class="contact">
                 <li>
                   <h3>Email</h3>
-                  <a href="mailto:coach.luolivella@gmail.com">Email Coach Lucía Olivella</a>
+                  <a href="mailto:coach.luolivella@gmail.com">coach.luolivella@gmail.com</a>
 
                 </li>
                 <li>
