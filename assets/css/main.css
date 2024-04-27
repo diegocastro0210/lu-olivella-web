@@ -3645,6 +3645,11 @@ body.is-preload .wrapper.fade > .inner {
   #sidebar + #wrapper {
     padding-top: 0;
   }
+
+  #header .logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 #header + #wrapper > .wrapper > .inner {
