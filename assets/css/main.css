@@ -3599,12 +3599,6 @@ body.is-preload .wrapper.fade > .inner {
     flex-direction: column; /* Stacks logo and nav vertically on smaller screens */
   }
 
-  #header .logo,
-  #header #nav {
-    margin-left: 0; /* Removes the margin on mobile to align with the x-axis start */
-    margin-right: 0; /* Removes the margin on mobile to align with the x-axis start */
-  }
-
   #header #nav ul {
     flex-direction: column; /* Stacks nav items vertically */
     display: none;
